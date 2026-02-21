@@ -22,6 +22,18 @@ arch aarch64_generic 10\n\
 arch aarch64_cortex-a53 15' repositories.conf
 
 
+OFFICIAL="https://downloads.immortalwrt.org"
+MIRROR="https://mirrors.vsean.net/openwrt"
+echo ">>> official failed, switching to mirror"
+BASE_URL="$MIRROR"
+echo "Using BASE_URL = $BASE_URL"
+echo "========================================"
+echo "Updating repositories.conf"
+echo "========================================"
+sed -i "s#${OFFICIAL}#${BASE_URL}#g" repositories.conf
+cat repositories.conf
+
+
 
 # yml 传入的路由器型号 PROFILE
 echo "Building for profile: $PROFILE"
