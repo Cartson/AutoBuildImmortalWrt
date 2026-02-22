@@ -23,7 +23,7 @@ arch aarch64_cortex-a53 15' repositories.conf
 
 
 OFFICIAL="https://downloads.immortalwrt.org"
-MIRROR="https://mirrors.ustc.edu.cn/immortalwrt"
+MIRROR="https://mirrors.pku.edu.cn/immortalwrt"
 echo ">>> official failed, switching to mirror"
 BASE_URL="$MIRROR"
 echo "Using BASE_URL = $BASE_URL"
