@@ -5,12 +5,11 @@ on:
       luci_version:
         description: "选择luci版本"
         required: false
-        default: "25.12.2"
+        default: "25.12.1"
         type: choice
         options:
           - 25.12.0
           - 25.12.1
-          - 25.12.2
       profile:
         type: choice
         description: "请选择树莓派型号"
@@ -131,7 +130,7 @@ jobs:
               ;;
           esac
           echo "ROOTFS_SIZE=$ROOTFS_SIZE" >> $GITHUB_ENV
-          luci_version="${{ github.event.inputs.luci_version || '25.12.2' }}"
+          luci_version="${{ github.event.inputs.luci_version || '25.12.1' }}"
 
           # 根据树莓派型号选择对应的 imagebuilder 镜像与目标子目录
           case "$profile" in
