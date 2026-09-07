@@ -61,15 +61,6 @@ on:
       pppoe_password:
         description: "宽带密码 (若启用PPPoE)"
         required: false
-  # push 到 dev-raspberrypi-* 分支时自动触发，用于测试工作流本身
-  push:
-    branches:
-      - dev-raspberrypi-25.12.x-*
-    paths:
-      - '.github/workflows/build-raspberrypi-25.12.x.yml'
-      - 'raspberrypi/25.12/**'
-      - 'shell/**'
-      - 'files/**'
 
 permissions:
   contents: write
